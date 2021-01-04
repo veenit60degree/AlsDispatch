@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tripHisDLay"
+    android:background="@drawable/nbackground"
+
+
+    >
+
+
+    <include
+        android:id="@+id/tripActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/action_bar"
+        />
+
+
+    <ScrollView
+        android:id="@+id/loadDetailHistoryScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tripActionBar"
+        android:scrollbars="none"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/margin_short_2"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/margin_10"
+
+                >
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_15"
+                    android:orientation="vertical"
+
+                    >
+
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/LoadNoTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Load"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_20"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text_new"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/margin_16"
+                            android:layout_alignParentLeft="true"
+                            android:paddingLeft="@dimen/margin_short_5"
+                            android:textStyle="bold"
+                            />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsBoldTextView
+                            android:layout_width="@dimen/view_height_140"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_short_7"
+                            android:textSize="@dimen/text_size_17"
+                            android:text="@string/PickupTime"
+                            android:textColor="@color/black_hover"
+                            android:textStyle="bold"
+
+
+                            />
+
+                        <com.als.dispatchNew.customfont.textview.GibsonRegularTextView
+                            android:id="@+id/pickTimeDetailTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/colorHeadingBlue"
+                            android:textStyle="bold"
+
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_short_5"
+
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsBoldTextView
+                            android:layout_width="@dimen/view_height_140"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_short_7"
+                            android:textSize="@dimen/text_size_17"
+                            android:text="@string/DeliveredTime"
+                            android:textColor="@color/black_hover"
+                            android:textStyle="bold"
+
+
+                            />
+
+                        <com.als.dispatchNew.customfont.textview.GibsonRegularTextView
+                            android:id="@+id/deliveryTimeDetailTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text_new"
+                            android:textStyle="bold"
+
+
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginBottom="@dimen/margin_11"
+                        />
+
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/shipperNameConTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shipper Name"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/shipperNameConView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_15"
+                            android:layout_marginTop="@dimen/margin_short_3"
+                            android:paddingLeft="@dimen/margin_short_5"
+                            android:textColor="@color/black"
+                            android:text="NOT AVAILABLE"
+                            android:layout_toRightOf="@+id/shipperNameConTV"
+                            android:gravity="right"
+                            android:layout_alignParentRight="true"
+                            />
+
+
+                        <ImageView
+                            android:id="@+id/locationIV2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/nlocation"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/margin_short_5"
+                            android:layout_below="@+id/shipperNameConTV"
+
+                            />
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/shipperAddressConView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/gray_text"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:paddingLeft="@dimen/margin_short_6"
+                            android:text="NOT AVAILABLE"
+                            android:layout_below="@+id/shipperNameConTV"
+                            android:layout_marginTop="@dimen/margin_short_5"
+                            android:layout_toRightOf="@+id/locationIV2"
+                            />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/consineeNameTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Consignee Name"
+                            android:paddingTop="@dimen/margin_short_5"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/congineeNameView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NOT AVAILABLE"
+                            android:textSize="@dimen/text_size_15"
+                            android:layout_marginTop="@dimen/margin_short_7"
+                            android:paddingLeft="@dimen/margin_short_5"
+                            android:textColor="@color/black"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/consineeNameTV"
+                            android:gravity="right"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/locationIV1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/nlocation"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/margin_short_5"
+                            android:layout_below="@+id/consineeNameTV"
+
+                            />
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/consigneeAddressView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/gray_text"
+                            android:text="NOT AVAILABLE"
+                            android:paddingLeft="@dimen/margin_short_6"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:layout_below="@+id/consineeNameTV"
+                            android:layout_marginTop="@dimen/margin_short_5"
+                            android:layout_toRightOf="@+id/locationIV1"
+
+
+                            />
+
+                    </RelativeLayout>
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/conAddressTV"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="CONSIGNEE ADDRESS"-->
+                    <!--android:paddingTop="1dp"-->
+                    <!--android:paddingBottom="3dp"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textColor="@color/gray_text"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--/>-->
+
+
+
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/grey_line_list"-->
+                    <!--android:layout_marginTop="4dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--/>-->
+
+
+
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+
+
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/margin_short_9"
+                        android:paddingBottom="@dimen/margin_short_9"
+
+
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/lbsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/quantityView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/lbsTV"
+                            android:gravity="right"
+
+                            />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        android:paddingTop="@dimen/margin_short_5"
+                        android:paddingBottom="@dimen/margin_short_5"
+
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/margin_short_9"
+                        android:paddingBottom="@dimen/margin_short_9"
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/whtTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Weight"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/wieghtView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/whtTV"
+                            android:gravity="right"
+
+
+                            />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/margin_short_9"
+                        android:paddingBottom="@dimen/margin_short_9"
+
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/typeTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Load Type"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/typeConView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_alignParentRight="true"
+
+
+                            />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/margin_short_9"
+                        android:paddingBottom="@dimen/margin_short_9"
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/BLNoTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BL Number"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/BillNoView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/BLNoTV"
+                            android:gravity="right"
+
+                            />
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_short_5"
+                        android:paddingBottom="@dimen/margin_short_5"
+                        android:orientation="vertical"
+
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/poNumber"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_18"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/poNumberTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_alignParentRight="true"
+
+
+                            />
+
+                    </RelativeLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_short_5"
+                        android:paddingBottom="@dimen/margin_short_5"
+                        android:orientation="vertical"
+
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/trailerNo"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_18"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/trailerNumberTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_alignParentRight="true"
+
+
+                            />
+
+                    </RelativeLayout>
+
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_short_5"
+                        android:paddingBottom="@dimen/margin_short_5"
+                        android:orientation="vertical"
+
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/truckNo"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_18"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/truckNumberTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_alignParentRight="true"
+
+
+                            />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/DescriptionTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Description"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/DescriptionView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_below="@+id/DescriptionTV"
+
+                            />
+
+                    </RelativeLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line_list"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/margin_short_5"
+                        android:paddingBottom="@dimen/margin_short_5"
+                        android:orientation="vertical"
+
+                        >
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pickupComments"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:layout_gravity="left"
+                            android:textColor="@color/black"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                            android:id="@+id/pickupCommentsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/gray_text"
+                            android:singleLine="true"
+                            android:text="NOT AVAILABLE"
+                            android:layout_gravity="left"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/uploadedDocLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/margin_short_5"
+                        android:visibility="gone"
+                        >
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/grey_line_list"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="5dp"
+                            />
+
+
+                        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                            android:id="@+id/upoadedDocTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/uploadedDocuments"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:paddingBottom="3dp"
+                            android:textSize="@dimen/text_size_17"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/margin_15"
+                            />
+
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/uploadedImgRecycleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/upoadedDocTitle"
+                            android:layout_marginTop="@dimen/margin_short_2"
+                            />
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <com.als.dispatchNew.customfont.button.CalibriBoldButton
+                android:id="@+id/confirmLoadBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_height_55"
+                android:text="Confirm Delivery"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/margin_24"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="@dimen/view_height_60"
+                android:paddingRight="@dimen/view_height_60"
+                android:background="@drawable/red_btn_selector"
+                android:layout_marginTop="@dimen/view_height_30"
+                android:layout_below="@+id/cardview"
+                android:textAllCaps="false"
+
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+<!--<View-->
+    <!--android:id="@+id/bottomView"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--/>-->
+</RelativeLayout>

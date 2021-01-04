@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/nbackground"
+    android:id="@+id/jobMainLay"
+    >
+
+
+    <include
+        android:id="@+id/actionbarLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/action_bar"
+        />
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/listLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbarLay"
+
+        >
+
+
+    <ListView
+        android:id="@+id/localJobsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/margin_short_5"
+        tools:listitem="@layout/list_item"
+        android:listSelector="@drawable/listview_selector"
+        />
+
+
+
+
+
+        <TextView
+            android:id="@+id/noTripTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/No_Trip_Assigned"
+            android:textColor="@color/gray_text_transparent"
+            android:textSize="@dimen/text_size_29"
+            android:layout_centerInParent="true"
+
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/mapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/tabLayout"
+         android:layout_marginTop="8dp"
+            android:visibility="gone"
+            >
+
+
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/callJobFragBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+</RelativeLayout>

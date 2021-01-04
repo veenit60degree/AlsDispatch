@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/nbackground"
+    >
+
+
+
+        <include
+            android:id="@+id/actionbarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/action_bar"
+            />
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/margin_20"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/profileCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/margin_10"
+           android:layout_marginTop="@dimen/view_height_45"
+            app:cardElevation="@dimen/margin_short_2"
+            app:cardBackgroundColor="@color/white"
+            app:cardUseCompatPadding="true"
+
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_15"
+                >
+
+                <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                    android:id="@+id/userNameProfileTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray_text_new"
+                    android:textSize="@dimen/text_size_19"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/view_height_40"
+
+                    />
+
+                <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                    android:id="@+id/companyNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/text_size_25"
+                    android:layout_marginTop="@dimen/margin_short_3"
+                    android:layout_gravity="center_horizontal"
+
+                    />
+
+                <!--android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20"
+                -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_18"
+                    android:paddingTop="@dimen/margin_short_8"
+                    android:paddingBottom="@dimen/margin_short_8"
+                    >
+
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileName"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_18"
+
+
+                        />
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/profileNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_17"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_short_1"
+                    android:background="@color/gray_text_new"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_short_8"
+                    android:paddingBottom="@dimen/margin_short_8"
+                    >
+
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileEmail"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_18"
+
+
+                        />
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/profileEmailTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_17"
+                        android:layout_alignParentRight="true"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_short_1"
+                    android:background="@color/gray_text_new"
+                    />
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_short_8"
+                    android:paddingBottom="@dimen/margin_short_8"
+                    >
+
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileGender"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_18"
+
+
+                        />
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/profileGenderTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_17"
+                        android:layout_alignParentRight="true"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_short_1"
+                    android:background="@color/gray_text_new"
+                    />
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_short_8"
+                    android:paddingBottom="@dimen/margin_short_8"
+                    >
+
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileDob"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_18"
+
+
+                        />
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/profileDobTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_17"
+                        android:layout_alignParentRight="true"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_short_1"
+                    android:background="@color/gray_text_new"
+                    />
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_short_8"
+                    android:paddingBottom="@dimen/margin_short_8"
+                    >
+
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileDLNo"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_18"
+
+
+                        />
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/profileDlNoTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_17"
+                        android:layout_alignParentRight="true"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_short_1"
+                    android:background="@color/gray_text_new"
+                    />
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_short_8"
+                    android:paddingBottom="@dimen/margin_short_8"
+                    >
+
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scanCode"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_18"
+
+
+                        />
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/scanCodeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_17"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+
+
+
+                </RelativeLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_short_1"
+                    android:background="@color/gray_text_new"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_short_8"
+                    android:paddingBottom="@dimen/margin_short_8"
+                    >
+
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/carrierCode"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_18"
+
+
+                        />
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/carrierCodeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_colornew"
+                        android:textSize="@dimen/text_size_17"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <RelativeLayout
+            android:id="@+id/editImageView"
+            android:layout_width="@dimen/view_height_150"
+            android:layout_height="@dimen/view_height_120"
+            android:layout_centerHorizontal="true"
+            >
+
+            <com.als.dispatchNew.constants.RoundedImageView
+                android:id="@+id/uploadImgBtn"
+                android:layout_width="@dimen/view_height_100"
+                android:layout_height="@dimen/view_height_100"
+                android:src="@drawable/user_profile_dummy"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <ImageView
+                android:id="@+id/editImgVw"
+                android:layout_width="@dimen/view_height_33"
+                android:layout_height="@dimen/view_height_33"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/margin_17"
+                android:layout_marginBottom="@dimen/margin_13"
+                android:src="@drawable/edit_profile_pen"
+
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

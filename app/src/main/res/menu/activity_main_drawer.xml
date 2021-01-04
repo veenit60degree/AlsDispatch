@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+
+    >
+
+
+
+
+    <group android:checkableBehavior="single"
+
+        >
+        <item
+            android:id="@+id/nav_new_order"
+            android:icon="@drawable/trip_home"
+            android:title="@string/trips"
+
+            android:checked="true"
+
+            />
+        <item
+            android:id="@+id/nav_today_order"
+            android:icon="@drawable/trip_home"
+            android:title="@string/trips"
+
+            />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/trip_home"
+            android:title="@string/trips" />
+
+        <!--<item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/trip_home"
+            android:title="@string/action_settings" />-->
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/trip_home"
+            android:title="@string/trips" />
+
+    </group>
+
+
+<!--    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>-->
+
+</menu>

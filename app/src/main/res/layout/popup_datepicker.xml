@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/linearLayout1"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical" 
+android:background="@android:color/transparent"
+android:layout_margin="15dp"
+>
+
+    
+    <LinearLayout android:id="@+id/scrollLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+
+
+
+
+        <DatePicker
+         android:id="@+id/datePicker"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:calendarViewShown="false"
+
+        />
+
+
+
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+
+    <com.als.dispatchNew.customfont.textview.PTSansRegularTextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:visibility="gone"
+        />
+    
+    <com.als.dispatchNew.customfont.button.CalibriBoldButton
+        android:id="@+id/setDate"
+        android:layout_width="@dimen/view_height_130"
+        android:layout_height="@dimen/view_height_35"
+        android:text="Set Date"
+        android:background="@drawable/red_btn_selector"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="@dimen/margin_short_5"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        />
+    
+    </LinearLayout>
+</LinearLayout>

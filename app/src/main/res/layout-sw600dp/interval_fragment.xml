@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nbackground"
+
+
+    >
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_10"
+        app:cardElevation="@dimen/margin_short_2"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true"
+        android:layout_marginHorizontal="@dimen/margin_21"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_20"
+            >
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingBottom="@dimen/margin_10"
+
+                >
+
+
+                <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                    android:id="@+id/fromTV"
+                    android:layout_width="@dimen/view_height_110"
+                    android:layout_height="@dimen/view_height_40"
+                    android:text="@string/from"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="@dimen/text_size_19"
+                    android:paddingBottom="@dimen/margin_13"
+                    android:layout_centerVertical="true"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/FromDateBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_50"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/fromTV"
+
+                    >
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/dateFromTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_18"
+                        android:ems="6"
+                        android:gravity="center_vertical"
+                        android:hint="@string/date_format"
+                        android:layout_toLeftOf="@+id/timeFromTxtView"
+                        android:background="@drawable/date_picker_style_tablet"
+                        android:layout_marginRight="@dimen/text_size_10"/>
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/timeFromTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_8"
+                        android:ems="4"
+                        android:gravity="center_vertical"
+                        android:hint="@string/time_format"
+                        android:layout_alignParentRight="true"
+                        android:textSize="@dimen/text_size_18"
+                        android:background="@drawable/date_picker_style_tablet"/>
+                </LinearLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_short_8"
+                android:paddingBottom="@dimen/margin_short_8"
+
+                >
+
+
+                <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+                    android:id="@+id/toTV"
+                    android:layout_width="@dimen/view_height_110"
+                    android:layout_height="@dimen/view_height_50"
+                    android:text="@string/to_only"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="@dimen/text_size_19"
+                    android:paddingBottom="@dimen/margin_13"
+                    android:layout_centerVertical="true"
+                    />
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/ToDateBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_50"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/toTV"
+
+                    >
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/dateToTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="6"
+                        android:gravity="center_vertical"
+                        android:hint="@string/date_format"
+                        android:layout_toLeftOf="@+id/timeToTxtView"
+                        android:background="@drawable/date_picker_style_tablet"
+                        android:textSize="@dimen/text_size_18"
+
+                        android:layout_marginRight="@dimen/text_size_10"
+                        />
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/timeToTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_8"
+                        android:gravity="center_vertical"
+                        android:ems="4"
+                        android:hint="@string/time_format"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/date_picker_style_tablet"
+                        android:textSize="@dimen/text_size_18"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+            <com.als.dispatchNew.customfont.button.PoppinsMediumButton
+                android:id="@+id/showHistoryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_height_55"
+                android:text="Show History"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_below="@+id/passLay"
+                android:textSize="@dimen/margin_18"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/view_height_35"
+                android:layout_marginBottom="@dimen/margin_20"
+               android:paddingLeft="@dimen/view_height_50"
+                android:paddingRight="@dimen/view_height_50"
+
+                android:background="@drawable/circlebutton"
+                />
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

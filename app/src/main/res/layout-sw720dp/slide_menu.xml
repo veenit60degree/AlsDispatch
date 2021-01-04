@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/white_default"
+            android:scaleType="centerCrop"
+            />
+
+
+        <ImageView
+       android:id="@+id/userProfileIV"
+       android:layout_width="@dimen/view_height_80"
+       android:layout_height="@dimen/view_height_80"
+        android:src="@drawable/user_profile_dummy"
+        android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:layout_marginBottom="1dp"
+       android:layout_marginLeft="@dimen/margin_10"
+       android:layout_marginRight="@dimen/margin_10"
+
+       />
+
+        <TextView
+            android:id="@+id/usernameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/userProfileIV"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Username"
+            android:textColor="@color/colorBluenew"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_14"
+            android:paddingTop="@dimen/margin_short_5"
+            android:paddingBottom="@dimen/margin_short_4"
+
+            />
+
+        <View
+            android:id="@+id/usernameView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_short_1"
+            android:background="@color/gray_text_new"
+            android:layout_below="@+id/usernameTV"
+            />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/usernameTV"
+            android:scrollbars="none"
+
+            >
+
+    <LinearLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="@dimen/margin_short_6"
+        android:gravity="center">
+
+        <!-- profile layout -->
+
+
+
+        <LinearLayout
+            android:id="@+id/tripLayout"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slider_list_selector"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_20"
+            >
+
+            <ImageView
+                android:id="@+id/triplogoIV"
+                android:layout_width="@dimen/view_height_30"
+                android:layout_height="@dimen/view_height_30"
+                android:src="@drawable/trip_home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+
+                />
+
+            <TextView
+                android:id="@+id/currentbooking_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Trips"
+                android:textColor="@color/colorBluenew"
+                android:textSize="@dimen/text_size_12"
+                android:textAllCaps="true"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jobLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slider_list_selector"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            >
+
+
+<!-- menu_balance_icon -->
+            <ImageView
+                android:id="@+id/loctionlogoIV"
+                android:layout_width="@dimen/view_height_30"
+                android:layout_height="@dimen/view_height_30"
+                android:src="@drawable/trip_home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+
+                />
+            <TextView
+                android:id="@+id/slide_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:text="Local Trips"
+                android:textColor="@color/colorBluenew"
+                android:textSize="@dimen/text_size_12"
+                android:textAllCaps="true"
+
+                />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/tripExpenseLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slider_list_selector"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+
+            >
+            <ImageView
+                android:id="@+id/expencelogoIV"
+                android:layout_width="@dimen/view_height_35"
+                android:layout_height="@dimen/view_height_35"
+                android:src="@drawable/ic_expense_dollor"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:text="Expenses"
+                android:textColor="@color/colorBluenew"
+                android:textSize="@dimen/text_size_12"
+                android:textAllCaps="true"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tripmsgLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slider_list_selector"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            >
+
+            <ImageView
+                android:id="@+id/msglogoIV"
+                android:layout_width="@dimen/margin_26"
+                android:layout_height="@dimen/margin_26"
+                android:src="@drawable/ic_message"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:text="Messages"
+                android:textColor="@color/colorBluenew"
+                android:textSize="@dimen/text_size_12"
+                android:textAllCaps="true"
+
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tripHistoryLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slider_list_selector"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            >
+
+            <ImageView
+                android:id="@+id/historylogoIV"
+                android:layout_width="@dimen/margin_28"
+                android:layout_height="@dimen/margin_28"
+                android:src="@drawable/ic_history"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:text="History"
+                android:textColor="@color/colorBluenew"
+                android:textSize="@dimen/text_size_12"
+                android:textAllCaps="true"
+
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settingLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slider_list_selector"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            >
+
+            <ImageView
+                android:id="@+id/settinglogoIV"
+                android:layout_width="@dimen/margin_28"
+                android:layout_height="@dimen/margin_28"
+                android:src="@drawable/ic_settings"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:text="Settings"
+                android:textColor="@color/colorBluenew"
+                android:textSize="@dimen/text_size_12"
+                android:textAllCaps="true"
+
+                />
+
+
+
+            <LinearLayout
+                android:id="@+id/helpLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/slider_list_selector"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_20"
+                >
+
+                <ImageView
+                    android:id="@+id/helplogoIV"
+                    android:layout_width="@dimen/view_height_30"
+                    android:layout_height="@dimen/view_height_30"
+                    android:src="@drawable/ic_help"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+
+                    android:text="Help"
+                    android:textColor="@color/colorBluenew"
+                    android:textSize="@dimen/text_size_12"
+                    android:textAllCaps="true"
+
+
+                    />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/logoutLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slider_list_selector"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/view_height_40"
+             >
+
+
+            <ImageView
+                android:id="@+id/logoutlogoIV"
+                android:layout_width="@dimen/view_height_32"
+                android:layout_height="@dimen/view_height_32"
+                android:src="@drawable/ic_logout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:text="Logout"
+                android:textColor="@color/colorBluenew"
+                android:textSize="@dimen/text_size_12"
+                android:textAllCaps="true"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_20"
+            android:background="@color/white"
+            />
+
+    </LinearLayout>
+
+        </ScrollView>
+
+
+</RelativeLayout>

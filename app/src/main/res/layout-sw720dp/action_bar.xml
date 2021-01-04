@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_short_4"
+        app:cardBackgroundColor="@color/grey_light_line"
+        app:cardUseCompatPadding="true"
+
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            >
+
+
+        <RelativeLayout
+        android:id="@+id/actionbarLay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_60"
+        android:background="@color/white"
+
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/backMenuLay"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_height_60"
+            android:paddingRight="@dimen/margin_15"
+            android:background="@drawable/white_button_selector"
+
+
+            >
+
+            <ImageView
+                android:id="@+id/menuImageView"
+                android:layout_width="@dimen/view_height_35"
+                android:layout_height="@dimen/view_height_35"
+                android:src="@drawable/nsidemenu"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_15"
+                />
+
+
+            <TextView
+                android:id="@+id/menuTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/menuImageView"
+                android:text="Back"
+                android:textSize="17sp"
+                android:paddingLeft="2dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+        <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+            android:id="@+id/tripTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_21"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/searchTripBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_height_60"
+            android:paddingLeft="@dimen/margin_short_5"
+            android:paddingRight="@dimen/margin_short_5"
+            android:layout_toLeftOf="@+id/localTripBtn"
+            android:layout_marginRight="@dimen/margin_short_5"
+            android:background="@drawable/white_button_selector"
+
+            >
+
+
+        <ImageView
+            android:id="@+id/searchTripIV"
+            android:layout_width="@dimen/view_height_40"
+            android:layout_height="@dimen/view_height_40"
+            android:src="@drawable/search"
+            android:layout_centerVertical="true"
+
+            />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/localTripBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_height_60"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/margin_short_5"
+            android:paddingRight="@dimen/margin_short_5"
+            android:background="@drawable/white_button_selector"
+
+            >
+
+        <ImageView
+            android:id="@+id/localTripIV"
+            android:layout_width="@dimen/view_height_43"
+            android:layout_height="@dimen/view_height_43"
+            android:src="@drawable/nbell001"
+            android:layout_centerVertical="true"
+            />
+.
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+        android:id="@+id/searchBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_60"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:paddingRight="@dimen/margin_10"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/backActionBar"
+            android:layout_width="@dimen/view_height_50"
+            android:layout_height="@dimen/view_height_60"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/margin_15"
+            android:background="@drawable/white_button_selector"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/nback"
+                />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_text_transparent"
+            android:layout_toRightOf="@+id/backActionBar"
+            android:paddingLeft="@dimen/margin_short_6"
+            android:paddingRight="@dimen/margin_29"
+            android:hint="@string/trip_number"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/margin_10"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:textCursorDrawable="@color/black"
+            android:theme="@style/Theme.App.Search"
+            android:imeOptions="actionSearch"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/margin_short_5"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_short_5"
+            >
+
+            <ImageView
+                android:id="@+id/clearTextBtn"
+                android:layout_width="@dimen/margin_23"
+                android:layout_height="@dimen/margin_23"
+                android:src="@drawable/cancel"
+                android:visibility="gone"
+                />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

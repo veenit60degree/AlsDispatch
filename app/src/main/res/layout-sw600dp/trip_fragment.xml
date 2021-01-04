@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nbackground"
+    android:id="@+id/tripFragMLay"
+    >
+
+
+    <include
+        android:id="@+id/tripActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/action_bar"
+        />
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tripSwipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tripActionBar"
+
+        >
+    <ListView
+        android:id="@+id/tripListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent"
+        android:layout_marginTop="@dimen/margin_20"
+        tools:listitem="@layout/list_item"
+        android:listSelector="@drawable/listview_selector"
+        android:background="@color/transparent"
+
+        />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+    <include
+        android:id="@+id/tripTabLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/fragment_trip_details"
+        android:layout_below="@+id/tripTabLayout"
+        android:visibility="gone"
+        />
+
+
+    <include
+        android:id="@+id/deliveryTabLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/delivery_time_doc"
+        android:layout_below="@+id/tripTabLayout"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/noDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/No_Trip_Assigned"
+        android:textColor="@color/gray_text_transparent"
+        android:textSize="@dimen/text_size_29"
+        android:layout_centerInParent="true"
+
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/mapTripLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+
+        >
+
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+
+    </RelativeLayout>
+
+
+<Button
+    android:id="@+id/tripHiddenBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    />
+
+    <Button
+        android:id="@+id/mapViewBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false"
+        android:visibility="gone"
+        />
+
+
+<com.als.dispatchNew.constants.TouchImageView
+    android:id="@+id/viewLargeImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:visibility="gone"
+    />
+
+
+</RelativeLayout>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/nbackground"
+        android:layout_centerInParent="true"
+        android:scaleType="center"
+        />
+
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/view_height_30"
+    >
+
+    <RelativeLayout
+        android:id="@+id/mainLoginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_als3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/view_height_50"
+        android:layout_marginRight="@dimen/view_height_160"
+        android:layout_marginLeft="@dimen/view_height_160"
+        android:layout_marginTop="@dimen/view_height_110"
+
+        />
+
+
+    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+        android:id="@+id/driverLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:textSize="@dimen/view_height_30"
+        android:text="@string/driver_login"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/logoImg"
+        android:layout_marginTop="@dimen/view_height_70"
+        />
+
+
+    <!--android:background="@drawable/white_border"-->
+<RelativeLayout
+    android:id="@+id/loginLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:paddingBottom="15dp"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_below="@+id/driverLogin"
+    >
+    
+    
+   <!-- <ImageView
+        android:id="@+id/logoImg"
+    android:layout_width="120dp"
+    android:layout_height="70dp"
+    android:background="@drawable/logo_nti"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="18dp"
+    android:layout_marginBottom="24dp"
+    
+    />
+    -->
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:hint="Username"
+        android:background="@color/transparent"
+        android:imeOptions="actionNext"
+        />
+
+    <LinearLayout 
+        android:id="@+id/loginLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/margin_25"
+
+        >
+
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.als.dispatchNew.customfont.edittext.PoppinsRegularEditText
+                android:id="@+id/userNameText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/username"
+                android:background="@drawable/ntextborder"
+                android:textColor="@color/app_theme_text"
+                android:paddingRight="@dimen/margin_15"
+                android:paddingLeft="@dimen/margin_15"
+                android:paddingTop="@dimen/margin_13"
+                android:paddingBottom="@dimen/margin_13"
+
+                android:textSize="@dimen/text_size_19"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout 
+        android:id="@+id/passLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/loginLay"
+        android:layout_marginHorizontal="@dimen/margin_25"
+        android:paddingBottom="@dimen/margin_short_5"
+        android:paddingTop="@dimen/margin_short_5"
+        android:layout_marginTop="@dimen/margin_short_8"
+        >
+        
+            <!--<ImageView -->
+    <!--android:layout_width="32dp"-->
+    <!--android:layout_height="32dp"-->
+    <!--android:src="@drawable/password"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!---->
+    <!--/>-->
+
+
+        <android.support.design.widget.TextInputLayout
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/gray_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.als.dispatchNew.customfont.edittext.PoppinsRegularEditText
+                android:id="@+id/passwordText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/password"
+                android:background="@drawable/ntextborder"
+                android:textColor="@color/app_theme_text"
+                android:inputType="textPassword"
+                android:paddingRight="@dimen/margin_15"
+                android:paddingLeft="@dimen/margin_13"
+                android:textSize="@dimen/text_size_19"
+                android:paddingTop="@dimen/margin_13"
+                android:paddingBottom="@dimen/margin_13"
+
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/passLay"
+        android:layout_marginRight="@dimen/margin_20"
+        android:text="@string/forgot_pass"
+        android:textColor="@color/blue_text_medium"
+        android:paddingRight="@dimen/margin_short_5"
+        android:paddingLeft="@dimen/margin_short_6"
+        android:paddingBottom="@dimen/margin_short_6"
+        android:paddingTop="@dimen/margin_short_2"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone"
+
+
+        />
+
+
+    <com.als.dispatchNew.customfont.button.CalibriBoldButton
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_height_55"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:layout_below="@+id/passLay"
+        android:textSize="@dimen/text_size_24"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/view_height_100"
+        android:paddingLeft="@dimen/view_height_60"
+        android:paddingRight="@dimen/view_height_60"
+        android:background="@drawable/red_btn_selector"
+        />
+    
+    
+</RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
+
+
+    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+        android:id="@+id/appVersionLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/blue_text_dark"
+        android:textSize="@dimen/text_size_15"
+        android:text="V - 1.0"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/margin_short_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_22"
+
+        />
+
+
+    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/powered_by"
+        android:textColor="@color/blue_text_dark"
+        android:textSize="@dimen/text_size_15"
+        android:paddingBottom="4dp"
+        />
+
+
+    <com.als.dispatchNew.customfont.textview.CalibriBoldTextView
+        android:id="@+id/buildTypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_29"
+        android:text="@string/indian"
+        android:textStyle="bold"
+        android:textColor="@color/blue_text_dark"
+        android:textSize="@dimen/text_size_21"
+        android:paddingBottom="4dp"
+        android:visibility="gone"
+
+        />
+
+
+
+</RelativeLayout>

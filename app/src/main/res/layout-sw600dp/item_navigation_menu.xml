@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slider_list_selector"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:paddingTop="@dimen/margin_short_6"
+        android:paddingBottom="@dimen/margin_short_6"
+        >
+
+        <ImageView
+            android:id="@+id/navMenuImgBtn"
+            android:layout_width="@dimen/view_height_35"
+            android:layout_height="@dimen/view_height_35"
+            android:src="@drawable/trip_home"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="1dp"
+            android:layout_gravity="center_horizontal"
+
+            />
+
+        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+            android:id="@+id/navMenuTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Trips"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorBluenew"
+            android:textSize="@dimen/text_size_15"
+            android:textAllCaps="true"
+
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

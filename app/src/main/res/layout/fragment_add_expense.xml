@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aigestudio="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/nbackground"
+        android:scaleType="centerCrop"
+        />
+
+    <include
+        android:id="@+id/actionbarExpenseDetailLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/action_bar"
+        />
+
+
+
+
+
+    <ScrollView
+        android:id="@+id/addExpenseWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbarExpenseDetailLay"
+
+
+        >
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/expenseCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15"
+            app:cardCornerRadius="@dimen/margin_10"
+            app:cardElevation="@dimen/margin_short_2"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true"
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/addExpenseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_20"
+                android:paddingLeft="@dimen/margin_12"
+                android:paddingRight="@dimen/margin_21"
+                android:paddingBottom="@dimen/margin_20"
+                >
+
+                <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                    android:id="@+id/expenseTripIdTxtVw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/select_Trip_No"
+                    android:textSize="@dimen/text_size_16"
+                    android:paddingLeft="@dimen/margin_short_8"
+                    android:paddingRight="@dimen/margin_10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_dropdown"
+                    android:singleLine="true"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_10"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_short_1"
+                    android:background="@color/gray_dropdown"
+                    />
+
+
+                <RelativeLayout
+                    android:id="@+id/expenseReasonLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:paddingLeft="@dimen/margin_short_8"
+                    android:paddingRight="@dimen/margin_10"
+                    >
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/expenseReasonTxtVw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/select_expense_reason"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_dropdown"
+
+                        />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_25"
+                        android:layout_height="@dimen/margin_25"
+                        android:src="@drawable/dropdown_gray"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        />
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_short_1"
+                    android:background="@color/gray_dropdown"
+                    />
+
+
+
+
+                <com.als.dispatchNew.customfont.edittext.PoppinsRegularEditText
+                    android:id="@+id/expenseReasonEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_16"
+                    android:paddingLeft="@dimen/margin_short_8"
+                    android:paddingRight="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_dropdown"
+                    android:hint="@string/expense_reason_optional"
+                    android:maxLines="4"
+                    android:minLines="2"
+                    android:gravity="top|left"
+                    android:visibility="gone"
+                    />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_40"
+                android:layout_marginTop="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                >
+
+                <LinearLayout
+                    android:id="@+id/expenseValueLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/margin_short_7"
+                        >
+
+
+
+                        <com.als.dispatchNew.customfont.edittext.PoppinsRegularEditText
+                            android:id="@+id/expenseAmountEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_height_39"
+                            android:hint="@string/Amount"
+                            android:textSize="@dimen/text_size_16"
+                            android:paddingLeft="@dimen/margin_short_8"
+                            android:paddingRight="@dimen/margin_10"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"
+                            android:textColorHint="@color/gray_dropdown"
+                            android:background="@color/transparent"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_short_1"
+                            android:background="@color/gray_dropdown"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="@dimen/margin_short_7"
+
+                        >
+
+                    <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                        android:id="@+id/expenseValueTxtVw"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_39"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:hint="@string/expense_value"
+                        android:paddingLeft="@dimen/margin_short_7"
+                        android:paddingTop="@dimen/margin_short_5"
+                        android:paddingBottom="@dimen/margin_short_5"
+                        android:layout_alignParentRight="true"
+                        android:textColorHint="@color/gray_dropdown"
+                        android:paddingRight="@dimen/view_height_30"
+                        android:singleLine="true"
+                        />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_short_1"
+                            android:background="@color/gray_dropdown"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="@dimen/margin_25"
+                    android:layout_height="@dimen/margin_25"
+                    android:src="@drawable/dropdown_gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+                <com.als.dispatchNew.customfont.edittext.PoppinsRegularEditText
+                    android:id="@+id/remarksEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Remarks_if_any"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:paddingLeft="@dimen/margin_short_8"
+                    android:paddingRight="@dimen/margin_10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_dropdown"
+                    android:minLines="2"
+                    android:maxLines="5"
+                    android:gravity="top|left"
+
+                    />
+
+
+
+
+
+
+                <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                    android:id="@+id/addDocView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AddDocument"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_marginTop="@dimen/margin_25"
+                    android:layout_marginRight="@dimen/margin_15"
+                    />
+
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="8dp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_short_8"
+                        >
+
+
+                        <LinearLayout
+                            android:id="@+id/addMoreExpnsLay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/addMoreExpnsIV"
+                            android:layout_width="@dimen/view_height_80"
+                            android:layout_height="@dimen/view_height_80"
+                            android:src="@drawable/add_pluss"
+
+                            />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <com.als.dispatchNew.customfont.button.CalibriBoldButton
+                    android:id="@+id/addExpenseBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_height_40"
+                    android:text="@string/add_Expense"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_17"
+                    android:paddingLeft="@dimen/view_height_50"
+                    android:paddingRight="@dimen/view_height_50"
+                    android:background="@drawable/circlebutton"
+                    android:layout_marginTop="@dimen/view_height_50"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/spinnCurencyType"
+                    android:layout_marginBottom="@dimen/margin_25"
+
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </ScrollView>
+
+
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/wheel_picker"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_150"
+        android:background="@color/wheel_background_color"
+        aigestudio:wheel_atmospheric="true"
+        aigestudio:wheel_curved="true"
+        aigestudio:wheel_cyclic="false"
+        aigestudio:wheel_item_align="center"
+        aigestudio:wheel_item_text_color="@color/wheel_item_color"
+        aigestudio:wheel_item_text_size="@dimen/text_size_24"
+        aigestudio:wheel_selected_item_text_color="@color/black"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/wheelPickerLay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_40"
+        android:background="@color/divider_light_grey_line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/view_height_150"
+        android:visibility="gone"
+        >
+
+
+        <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+            android:id="@+id/wheelTitleTxtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/Select"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/greyText"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            />
+
+
+
+        <com.als.dispatchNew.customfont.textview.SourceSansProBoldTextView
+            android:id="@+id/wheelSelectedBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:text="@string/done"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_15"
+
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

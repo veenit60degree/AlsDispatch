@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item><layer-list>
+        <item>
+            <shape android:shape="line">
+                <!-- background -->
+                <solid android:color="@color/white" />
+                <!-- border -->
+
+                <padding
+
+                    android:bottom="@dimen/margin_13"
+                    />
+
+                <!-- corner roundness -->
+                <!--<corners android:radius="@dimen/view_height_300" />-->
+
+            </shape>
+        </item>
+        <item >
+            <bitmap android:gravity="top|right"
+                android:src="@drawable/dropdown_gray" />
+        </item>
+    </layer-list></item>
+</selector>

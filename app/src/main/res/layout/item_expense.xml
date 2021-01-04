@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/tripExpenseHistoryCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        app:cardCornerRadius="@dimen/margin_10"
+        app:cardElevation="@dimen/margin_short_2"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_20"
+            android:paddingHorizontal="@dimen/margin_20"
+            android:paddingVertical="@dimen/margin_20"
+
+            >
+            <com.als.dispatchNew.customfont.textview.PoppinsLightTextView
+                android:id="@+id/TripNoTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/gray_text_dark"
+                android:text="@string/trip_number"
+                android:singleLine="true"
+                />
+
+            <com.als.dispatchNew.customfont.textview.PoppinsBoldTextView
+                android:id="@+id/tripExpenseTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:layout_toLeftOf="@+id/HistoryViewbtn"
+                android:layout_below="@+id/TripNoTV"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_short_5"
+
+                />
+
+            <com.als.dispatchNew.customfont.textview.PoppinsRegularTextView
+                android:id="@+id/HistoryViewbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_short_4"
+                android:paddingBottom="@dimen/margin_short_4"
+                android:layout_marginLeft="@dimen/margin_short_6"
+                android:layout_below="@+id/TripNoTV"
+                android:layout_alignParentRight="true"
+                android:text="@string/View"
+                android:gravity="center"
+                android:background="@drawable/noval_border"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

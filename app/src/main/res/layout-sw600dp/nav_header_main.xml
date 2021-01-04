@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navHeaderLay"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_height_210"
+    android:background="@color/white"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/margin_short_5"
+    android:paddingRight="@dimen/margin_short_5"
+    android:paddingBottom="@dimen/margin_10"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <com.als.dispatchNew.constants.RoundedImageView
+        android:id="@+id/userProfileIV"
+        android:layout_width="@dimen/view_height_110"
+        android:layout_height="@dimen/view_height_110"
+        android:layout_marginTop="@dimen/margin_18"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/user_profile_dummy"
+
+        />
+
+    <com.als.dispatchNew.customfont.textview.PoppinsSemiBoldTextView
+        android:id="@+id/usernameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/userProfileIV"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/Username"
+        android:textColor="@color/colorBluenew"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_17"
+        android:paddingTop="@dimen/margin_short_5"
+        android:paddingBottom="@dimen/margin_short_4"
+        android:maxLines="2"
+        android:gravity="center_horizontal"
+
+        />
+
+
+  <!--  <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_short_5"
+        android:elevation="@dimen/margin_short_5"
+        android:fadingEdgeLength="@dimen/margin_short_5"
+
+        android:text=""></android.support.v4.widget.Space>
+-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_short_1"
+        android:background="@color/gray_text_new"
+        />
+
+
+
+
+</LinearLayout>

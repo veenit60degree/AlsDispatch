@@ -1,0 +1,217 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_colorPrimaryy</item>
+        <item name="colorPrimaryDark">@color/app_colorPrimaryDark</item>
+        <item name="colorAccent">@color/voilet_bg</item>
+    </style>
+
+
+    <style name="AppThemeHome" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_text_medium</item>
+        <item name="colorPrimaryDark">@color/blue_text_dark</item>
+        <item name="colorAccent">@color/blue_text_dark</item>
+    </style>
+
+
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <style name="myImageView">
+        <item name="android:padding">@dimen/margin_short_3</item>
+        <item name="android:background">@drawable/image_stroke</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+
+    <style name="Theme.App.Search" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/gray_text_transparent</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="editTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/gray_text_transparent</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:paddingBottom">@dimen/margin_14</item>
+        <item name="android:paddingTop">@dimen/margin_10</item>
+
+    </style>
+
+
+
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">@dimen/margin_19</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">@dimen/view_height_55</item>
+        <item name="android:listPreferredItemHeightLarge">@dimen/view_height_65</item>
+    </style>
+
+
+    <style name="NavigationViewStyle7">
+        <item name="android:textSize">@dimen/margin_23</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">@dimen/view_height_70</item><!-- menu item height-->
+        <item name="android:listPreferredItemHeightLarge">@dimen/view_height_80</item>
+    </style>
+
+
+    <style name="NavigationViewStyle10">
+        <item name="android:textSize">@dimen/margin_25</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">@dimen/view_height_80</item><!-- menu item height-->
+        <item name="android:listPreferredItemHeightLarge">@dimen/view_height_90</item>
+    </style>
+
+
+
+
+
+
+    <!-- Base application theme. -->
+    <style name="AppThemeTrip" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_colorPrimaryy</item>
+        <item name="colorPrimaryDark">@color/app_colorPrimaryDark</item>
+        <item name="colorAccent">@color/voilet_bg</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeLogin" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_color</item>
+        <item name="colorPrimaryDark">@color/app_color</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+    <style name="DrivingTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorDriving</item>
+        <item name="colorPrimaryDark">@color/colorDriving</item>
+        <item name="colorAccent">@color/colorWhite</item>
+
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="colorControlActivated">@color/colorDriving</item>
+        <item name="colorControlHighlight">@color/colorDriving</item>
+        <item name="android:colorForeground">@color/colorGray</item>
+        <item name="colorButtonNormal">@color/colorGray</item>
+
+        <item name="android:textColor">#229922</item>
+        <item name="android:textSize">10sp</item>
+        <!--
+
+        colorControlNormal: The color applied to framework controls in their normal state.
+
+        colorControlActivated: The color applied to framework controls in their activated (ex. checked, switch on) state.
+
+        colorControlHighlight: The color applied to framework control highlights (ex. ripples, list selectors).
+
+        colorButtonNormal: The color applied to framework buttons in their normal state.
+
+        colorSwitchThumbNormal:
+
+    -->
+
+    </style>
+
+
+    <style name="AppTheme.EditText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/black_hover</item>
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorControlHighlight">@color/black_hover</item>
+        <item name="editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/grey_text</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:paddingBottom">@dimen/margin_short_7</item>
+
+    </style>
+
+
+
+    <style name="OnDutyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorOnDuty</item>
+        <item name="colorPrimaryDark">@color/colorOnDuty</item>
+        <item name="colorAccent">@color/colorWhite</item>
+
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="colorControlActivated">@color/colorOnDuty</item>
+        <item name="colorControlHighlight">@color/colorOnDuty</item>
+        <item name="colorSwitchThumbNormal">@color/colorOnDuty</item>
+        <item name="android:colorForeground">@color/colorGray</item>
+        <item name="colorButtonNormal">@color/colorGray</item>
+
+    </style>
+
+
+
+    <style name="OffDutyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorOffDuty</item>
+        <item name="colorPrimaryDark">@color/colorOffDuty</item>
+        <item name="colorAccent">@color/colorWhite</item>
+
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="colorControlActivated">@color/colorOffDuty</item>
+        <item name="colorControlHighlight">@color/colorOffDuty</item>
+        <item name="colorButtonNormal">@color/colorGray</item>
+        <item name="colorSwitchThumbNormal">@color/colorOffDuty</item>
+        <item name="android:colorForeground">@color/colorGray</item>
+
+    </style>
+
+
+
+    <style name="SleeperTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorSleeper</item>
+        <item name="colorPrimaryDark">@color/colorSleeper</item>
+        <item name="colorAccent">@color/colorSleeper</item>
+
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="colorControlActivated">@color/colorSleeper</item>
+        <item name="colorControlHighlight">@color/colorSleeper</item>
+        <item name="colorButtonNormal">@color/colorGray</item>
+        <item name="colorSwitchThumbNormal">@color/colorSleeper</item>
+        <item name="android:colorForeground">@color/colorGray</item>
+
+
+    </style>
+
+
+    <style name="MyStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/pink</item>
+        <item name="android:windowBackground">@drawable/date_picker_border</item>
+
+    </style>
+
+
+
+
+
+</resources>

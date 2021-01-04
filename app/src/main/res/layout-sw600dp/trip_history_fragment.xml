@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nbackground"
+    android:id="@+id/tripHisLay"
+    >
+
+
+
+
+
+
+
+    <ListView
+        android:id="@+id/tripHistoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tripActionBar"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/margin_short_6"
+        tools:listitem="@layout/list_item"
+        android:listSelector="@drawable/listview_selector"
+        android:background="@color/transparent"
+        android:paddingTop="@dimen/margin_15"
+
+        />
+
+
+
+
+
+    <TextView
+        android:id="@+id/noTripHistoryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/No_Trip_Assigned"
+        android:textColor="@color/gray_text_transparent"
+        android:textSize="@dimen/text_size_29"
+        android:layout_centerInParent="true"
+
+        />
+
+
+
+    <Button
+        android:id="@+id/tripHistoryBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:id="@+id/progressBarHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
